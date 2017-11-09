@@ -3,6 +3,25 @@
 {% block content %}
 <div class="starter-template">
     <h1>All Contacts</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <table class="col-sm-7 table">
+        <thead>
+            <p style="margin-bottom: 40px;">
+                <span class="badge badge-secondary" style="font-size: 12px; margin-top: -12px;"></span>
+            </p>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        {% for contact in contacts %}
+        <tbody>
+            <tr>
+                <td>{{ contact.name }} </td>
+                <td>{{contact.email}}</td>
+            </tr>
+        </tbody>
+        {% endfor %} 
+    </table>
+    
 </div>
 {% endblock content %}
